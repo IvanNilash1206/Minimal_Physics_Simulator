@@ -8,7 +8,7 @@ class Integrator(ABC):
     @abstractmethod
     def step(
             self,
-            state: State1d,
+            state: State1D,
             force_model: ForceModel,
             mass: float,
             t: float,
