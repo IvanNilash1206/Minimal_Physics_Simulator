@@ -1,27 +1,3 @@
-Good.
-Now we’re finally talking like an engineer, not a notebook solver.
-
-**Minimal Physics Simulator from Scratch (Stability + Performance Analysis)** is a *perfect* flagship if we do it properly.
-
-Not “toy gravity demo”.
-Not “just use PyBullet”.
-
-We build:
-
-* Deterministic core loop
-* Multiple integrators
-* Explicit stability analysis
-* Throughput measurements
-* Memory behavior analysis
-* Vectorized + batched stepping
-* CPU vs GPU comparison
-* Fixed timestep control loop
-* RL-style rollout batching
-
-This becomes your **systems proof-of-work**.
-
----
-
 # 🚀 Flagship Blueprint: Minimal Physics Simulator
 
 We will build it in **layers**.
