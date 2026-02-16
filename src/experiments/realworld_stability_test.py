@@ -32,7 +32,7 @@ for _ in range(horizon):
 state = env.get_state()
 print("Final state with jitter: ", state)
 
-print("\n===== Async Stopping =====")
+print("\n===== Async Stepping =====")
 env_async = BatchOscillatorEnv(8, k_over_m)
 async_env = AsyncBatchEnv(env_async)
 
@@ -40,4 +40,7 @@ for _ in range(horizon):
     async_env.step(dt)
 
 print("Async run complete")
+
+# Cleanup resources
+async_env.close()
 

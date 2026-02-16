@@ -15,8 +15,12 @@ class AsyncBatchEnv:
             self.env.v[i] += dt_variation[i] * a
             self.env.x[i] += dt_variation[i] * self.env.v[i]
 
-        reward = -self.env.x**2
+        reward = -np.sum(self.env.x**2, axis=-1)  # Shape: (num_envs,)
         done = np.zeros(self.num_envs, dtype=np.bool_)
 
         return self.env.get_state(), reward, done
+
+    def close(self):
+        """Cleanup method for AsyncBatchEnv. Currently no-op as no resources are managed."""
+        pass
 

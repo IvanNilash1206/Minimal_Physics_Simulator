@@ -6,6 +6,9 @@ def run_realworld_test(env_class, k_over_m, dt, horizon):
 
     states = []
 
+    # Capture initial state before any steps
+    states.append(env.get_state().copy())
+
     for _ in range(horizon):
         state, _, _ = env.step(dt)
         states.append(state.copy())
